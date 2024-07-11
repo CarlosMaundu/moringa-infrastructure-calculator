@@ -1,8 +1,29 @@
 header img {
   width: 50px;
   margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 30px;
+  position: absolute;
+  left: 0;
 }
+
+
+.header {
+  background-color: #6d31ed !important; /* Dark background color with !important */
+}
+
 
 header .h4 {
   margin: 0;
+  position: absolute;
+  left: 70px;
+}
+
+.btn-primary {
+  background-color: white;
+  color: #6d31ed;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: -60px;
+  right: 0;
 }
