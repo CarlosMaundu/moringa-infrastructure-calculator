@@ -5,7 +5,7 @@ import logo from '../img/logo.jpg';
 
 const Header = () => {
     return (
-        <header className="bg-dark text-white py-3">
+        <header className="header bg-dark text-white py-3">
             <div className="container d-flex justify-content-between align-items-center">
                 <div className="d-flex align-items-center">
                 <img
