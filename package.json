@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -37,5 +37,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "jest": {
+  "collectCoverage": true
+}
+
 }
