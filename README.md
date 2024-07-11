@@ -1,68 +1,64 @@
-# Infrastrucure Pricing Calculator
+# Moringa Infrastructure Calculator
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This project aims to provide an easy-to-use, web-based calculator for estimating infrastructure costs based on selected services and packages. This tool will be beneficial for internal sales teams and customers to quickly and accurately calculate costs without manual intervention.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Landing Page:**
+  - Display available services and packages in a visually appealing format.
+  - Call to action to start the estimation process.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Calculator Page:**
+  - Allow users to select one or multiple services.
+  - Display a running total of the selected services' costs.
 
-### `npm test`
+- **Logic for Calculations:**
+  - Implement the logic to handle service selection and cost calculation.
+  - Ensure the selection rules are enforced (e.g., only one package per service can be selected).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshots
 
-### `npm run build`
+#### Landing Page
+![Landing Page](./public/page1.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Calculator Page
+![Calculator Page](./public/page2.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js
+- npm
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/CarlosMaundu/moringa-infrastructure-calculator.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
 
-## Learn More
+We welcome contributions to improve the Pricing Calculator. To contribute:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Fork the repository**.
+2. **Create a new branch**:
+    ```sh
+    git checkout -b feature/your-feature-name
+    ```
+3. **Make your changes and commit them**:
+    ```sh
+    git commit -m "Add your feature description"
+    ```
+4. **Push to the branch**:
+    ```sh
+    git push origin feature/your-feature-name
+    ```
+5. **Create a pull request**.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.

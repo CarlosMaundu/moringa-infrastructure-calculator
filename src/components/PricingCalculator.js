@@ -29,14 +29,14 @@ const PricingCalculator = () => {
     );
   };
 
-//   const history = useHistory();
   const navigate = useNavigate();
 
   return (
     <div className="container mt-5">
-      <button className="btn btn-primary mb-3" onClick={() => navigate('/')}>
-        &lt; Homepage
-      </button>
+      <div className="homepage-link" onClick={() => navigate('/')}>
+        <span className="material-icons">arrow_back_ios</span>
+        <span className="homepage-text">Homepage</span>
+      </div>
       <h1 className="text-center mb-4">WELCOME TO OUR SERVICE CALCULATOR!</h1>
       <h2 className="text-center mb-4">Select your service plan</h2>
       <div className="row">
@@ -54,16 +54,27 @@ const PricingCalculator = () => {
                     onClick={() => handleSelect(service, plan)}
                   >
                     <div className="card-body">
-                      <h5 className="card-title">{plan.charAt(0).toUpperCase() + plan.slice(1)} ${{
-                        frontend: { basic: 100, advanced: 200 },
-                        backend: { basic: 150, advanced: 300 },
-                        database: { basic: 120, advanced: 240 }
-                      }[service][plan]}</h5>
-                      <p>OS: Enterprise Linux</p>
-                      <p>vCPU: {plan === 'basic' ? '4 (2 cores each)' : '8 (4 cores each)'}</p>
-                      <p>RAM: {plan === 'basic' ? '16GB DDR3' : '32GB DDR3'}</p>
-                      <p>Network: 1GB Ethernet</p>
-                      <p>Storage: {plan === 'basic' ? '500GB SSD' : '1TB SSD'}</p>
+                      <h5 className="card-title">
+                        <span className="material-icons">
+                          {selectedServices[service] === plan ? 'radio_button_checked' : 'radio_button_unchecked'}
+                        </span>
+                        {plan.charAt(0).toUpperCase() + plan.slice(1)}
+                        <div className="price">
+                          <span className="amount">
+                            ${{
+                              frontend: { basic: 100, advanced: 200 },
+                              backend: { basic: 150, advanced: 300 },
+                              database: { basic: 120, advanced: 240 }
+                            }[service][plan]}
+                          </span>
+                          <span className="per-year">/year</span>
+                        </div>
+                      </h5>
+                      <p><span className="material-icons">check</span>OS: Enterprise Linux</p>
+                      <p><span className="material-icons">check</span>vCPU: {plan === 'basic' ? '2 (4 cores each)' : '4 (8 cores each)'}</p>
+                      <p><span className="material-icons">check</span>RAM: {plan === 'basic' ? '16GB DDR3' : '32GB DDR3'}</p>
+                      <p><span className="material-icons">check</span>Network: 1GB Ethernet</p>
+                      <p><span className="material-icons">check</span>Storage: {plan === 'basic' ? '500GB SSD' : '1TB SSD'}</p>
                     </div>
                   </div>
                 ))}
@@ -95,7 +106,8 @@ const PricingCalculator = () => {
               )
             ))}
             <tr>
-              <td colSpan="3">Total Estimate</td>
+              <td colSpan="2"></td>
+              <td className="total-summary">Total Estimate</td>
               <td>${calculateTotal()}</td>
             </tr>
           </tbody>
